@@ -1,0 +1,7 @@
+img {
+    width: 200px;
+}
+/* This host selector applies the styles to the component tag wrapped around the template (ng container) */
+:host {
+    font-size: 10px;
+}
