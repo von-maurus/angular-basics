@@ -44,7 +44,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 - Scoped CSS: you can declare styles for a child component inside its .css or using selectors like "host" to applied style to a tag projection on a child. 
 
-- Pipes: in other words functions that transform a value, for example like "computed" variables on VueJS framework, but instead we can preserve the original value of the variable. Ex: storing price, showing number with currency by country or browser's locale. We have numbers of pipes that offers functionalities according to the use case. 
+- Pipes: in other words functions that transform a value, for example like "computed" variables on VueJS framework, but instead we can preserve the original value of the variable. Ex: storing price, showing number with currency by country or browser's locale. We have numbers of pipes that offers functionalities according to the use case. Pipes only change output on the template.
+
+- Directives: logic structures like conditionals, iterations and switches to put on a template and change states. 
+    - Attribute Directives: Change values of a class or variable, use for css for ex.
+    - Structural Directives: Change template elements and behaviour.
 
 
 

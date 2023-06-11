@@ -1,4 +1,12 @@
 <div>
+  <ng-template [ngIf]="blueClass">
+    <p>I'm an ng-template</p>
+  </ng-template>
+  <p *ngIf="blueClass"> I have a conditional with *ngIf, no need to put ng template</p>
+
+  <button (click)="blueClass = !blueClass" [ngClass]="{blue: blueClass}" [ngStyle]="{'font-size.px': fontSize}"> Change
+    color</button>
+  <hr>
   <!-- Interpolation -->
   <p> Hello {{name.toUpperCase()}}, this is a Basics Angular app </p>
   <p> Hello {{getName()}}, with function as a value </p>
@@ -11,9 +19,30 @@
     <h2>Cute Doggos</h2>
   </app-post>
 
+  <app-post *ngFor="let image of images; let i = index" [img]="image">
+    <h3>Image N° {{i + 1}}</h3>
+  </app-post>
+
   <div>
     <h1>{{ counter }}</h1>
   </div>
   <!-- Event binding -->
   <button (click)="incrementCounter()">Increment value </button>
+</div>
+
+<div>
+  <h3>Using pipes</h3>
+
+  <h4>Text pipes</h4>
+  <p>{{userName | uppercase}}</p>
+  <p>{{userName | lowercase}}</p>
+
+  <h4>Date pipes</h4>
+  <p>{{currentDate | date: "dd/MM/YYYY"}}</p>
+  <p>{{currentDate | date: "EEEE, MMM d, y"}}</p>
+
+  <h4>Currency pipes</h4>
+  <p>{{costCurrency | currency: 'EUR'}}</p>
+  <p>{{temperature | number: '1.0-0'}}</p>
+  <pre> {{ pizza | json}}</pre>
 </div>
